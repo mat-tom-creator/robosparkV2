@@ -1,23 +1,31 @@
 {
   "name": "robospark-backend",
   "version": "1.0.0",
-  "description": "Backend API for RoboSpark Summer Robotics Program",
+  "description": "Backend API for the RoboSpark robotics education platform using Prisma",
+  "main": "server.js",
   "type": "module",
-  "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^6.8.2",
-    "bcrypt": "^6.0.0",
+    "@prisma/client": "^5.5.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.4",
-    "express": "^4.19.2",
-    "helmet": "^7.1.0"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0",
-    "prisma": "^6.8.2"
+    "nodemon": "^3.0.1",
+    "prisma": "^5.5.2"
   }
 }

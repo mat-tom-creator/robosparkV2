@@ -5,27 +5,27 @@ import { DashboardLayout } from "../../components/dashboard/DashboardLayout";
 
 // Lazy-loaded dashboard components
 const DashboardOverview = lazy(() =>
-  import("@/components/dashboard/DashboardOverview").then((module) => ({
+  import("../../components/dashboard/DashboardOverview").then((module) => ({
     default: module.DashboardOverview,
   }))
 );
 const MyCourses = lazy(() =>
-  import("@/components/dashboard/MyCourses").then((module) => ({
+  import("../../components/dashboard/MyCourses").then((module) => ({
     default: module.MyCourses,
   }))
 );
 const CourseDetails = lazy(() =>
-  import("@/components/dashboard/CourseDetails").then((module) => ({
+  import("../../components/dashboard/CourseDetails").then((module) => ({
     default: module.CourseDetails,
   }))
 );
 const PaymentHistory = lazy(() =>
-  import("@/components/dashboard/PaymentHistory").then((module) => ({
+  import("../../components/dashboard/PaymentHistory").then((module) => ({
     default: module.PaymentHistory,
   }))
 );
 const AccountSettings = lazy(() =>
-  import("@/components/dashboard/AccountSettings").then((module) => ({
+  import("../../components/dashboard/AccountSettings").then((module) => ({
     default: module.AccountSettings,
   }))
 );
