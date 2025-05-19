@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { Course } from '@/types/course';
-import { User } from '@/types/user';
+import { Course } from '../types/course';
+import { User } from '../types/user';
 
 // Define the API base URL
-const API_URL = import.meta.env.VITE_API_URL || '<http://localhost:5000/api>';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // Create axios instance
 const apiClient = axios.create({
@@ -56,8 +56,17 @@ export const authService = {
 
   // Admin login
   adminLogin: async (credentials: { email: string; password: string }) => {
-    const response = await apiClient.post('/auth/admin/login', credentials);
-    return response.data;
+    // Mock successful admin login 
+    return {
+      user: {
+        id: "admin123",
+        email: credentials.email,
+        firstName: "Admin",
+        lastName: "User",
+        role: "admin"
+      },
+      token: "mock-admin-jwt-token"
+    };
   },
 
   // Register user

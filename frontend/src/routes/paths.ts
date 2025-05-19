@@ -7,9 +7,11 @@ export const paths = {
   contact: '/contact',
   
   // Registration and authentication
+  register: '/register', // Add this for compatibility with existing route references
   courseRegister: '/register', // Detailed course registration
   userRegister: '/register-account', // User account registration
   login: '/login',
+  signUp: '/register-account', // Add this for compatibility with existing route references
   forgotPassword: '/forgot-password',
   resetPassword: (token: string) => `/reset-password/${token}`,
   
@@ -22,8 +24,10 @@ export const paths = {
   
   // Admin section
   admin: '/admin',
+  adminLogin: '/admin/login', // Add the admin login path
   adminCourses: '/admin/courses',
   adminUsers: '/admin/users',
   adminRegistrations: '/admin/registrations',
   adminDiscounts: '/admin/discounts',
+  adminReports: '/admin/reports', // Might be useful for reports page
 };

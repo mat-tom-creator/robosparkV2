@@ -3,10 +3,11 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
-import courseRoutes from '../../src/routes/courseRoutes.js';
-import registrationRoutes from '../../src/routes/registrationRoutes.js';
-import discountRoutes from '../../src/routes/discountRoutes.js';
-import contactRoutes from '../../src/routes/contactRoutes.js';
+import courseRoutes from './src/routes/courseRoutes.js';
+import registrationRoutes from './src/routes/registrationRoutes.js';
+import discountRoutes from './src/routes/discountRoutes.js';
+import contactRoutes from './src/routes/contactRoutes.js';
+import authRoutes from './src/routes/authRoutes.js';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use('/api/courses', courseRoutes);
 app.use('/api/registrations', registrationRoutes);
 app.use('/api/discounts', discountRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/auth', authRoutes);
 
 // Root route
 app.get('/', (req, res) => {
